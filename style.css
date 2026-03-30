@@ -1,62 +1,185 @@
-/* Configuración General */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Variables de color para fácil edición */
+:root {
+    --azul-oscuro: #003366;
+    --amarillo-linea: #ffcc00;
+    --gris-fondo: #f4f4f4;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: var(--gris-fondo);
 }
 
-/* Encabezado y Navegación */
+/* Header */
 header {
-    background: #003366; /* Un azul institucional serio */
-    color: #fff;
+    background: var(--azul-oscuro);
+    color: var(--blanco);
     padding: 1rem 5%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 4px solid #ffcc00; /* Detalle en amarillo/dorado */
+    border-bottom: 5px solid var(--amarillo-linea);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header nav ul {
-    list-style: none;
+.logo-container {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
 }
 
-header nav a {
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.9rem;
 }
 
-/* Sección Principal (Hero) */
+/* Hero Section */
 .hero {
+    background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://via.placeholder.com/1200x400'); /* Aquí puedes poner una foto del colegio */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
     text-align: center;
-    padding: 60px 20px;
-    background: white;
 }
 
 .hero h2 {
     font-size: 2.5rem;
-    color: #003366;
+    margin-bottom: 10px;
 }
 
-button {
-    background: #003366;
-    color: white;
-    padding: 12px 25px;
-    border: none;
+.btn-principal {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--amarillo-linea);
+    color: var(--azul-oscuro);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
 }
 
-/* Pie de página */
-footer {
+/* Secciones generales */
+.container {
+    padding: 50px 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
     text-align: center;
-    padding: 20px;
+    color: var(--azul-oscuro);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* Grid de Sedes */
+.grid-sedes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.sede-card {
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--azul-oscuro);
+    transition: transform 0.3s;
+}
+
+.sede-card:hover {
+    transform: translateY(-10px);
+}
+
+.sede-card h3 {
+    color: var(--azul-oscuro);
+    margin-bottom: 15px;
+}
+
+.sede-card span {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #666;
+}
+
+/* Oferta Académica */
+.oferta-academica {
+    background: var(--azul-oscuro);
+    color: white;
+    text-align: center;
+}
+
+.oferta-academica .section-title {
+    color: white;
+}
+
+.niveles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.nivel {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
     background: #222;
-    color: #ccc;
-    font-size: 0.9rem;
+    color: #bbb;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.credits {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+/* Ajustes para Celular */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        margin-top: 15px;
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
 }
