@@ -5,68 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colegio El Divino Niño | Caucasia, Antioquia</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo Colegio El Divino Niño" class="logo-img">
-            <h1>El Divino Niño</h1>
+    <div class="top-bar">
+        <div class="container-flex">
+            <span><i class="fas fa-map-marker-alt"></i> Caucasia, Antioquia</span>
+            <span><i class="fas fa-phone"></i> Contacto: 300 000 0000</span>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sedes">Sedes</a></li>
-                <li><a href="#oferta">Oferta</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+    </div>
+
+    <header>
+        <div class="container-header">
+            <div class="logo-area">
+                <img src="logo.png" alt="Logo Colegio El Divino Niño" class="logo-img">
+                <div class="logo-text">
+                    <h1>COLEGIO EL DIVINO NIÑO</h1>
+                    <span>Educación con Valores y Excelencia</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#sedes">SEDES</a></li>
+                    <li><a href="#oferta">OFERTA</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h2>Formando el futuro de Caucasia</h2>
-            <p>Excelencia académica con valores humanos. Educación 100% Presencial.</p>
-            <a href="#contacto" class="btn-principal">Admisiones 2026</a>
-        </div>
-    </section>
-
-    <section id="sedes" class="container">
-        <h2 class="section-title">Nuestras Sedes en Caucasia</h2>
-        <div class="grid-sedes">
-            <div class="sede-card">
-                <h3>Sede San José</h3>
-                <p>Ubicada en el corazón del barrio San José. Atención integral para los más pequeños.</p>
-                <span>Niveles: Preescolar y Primaria</span>
-            </div>
-            <div class="sede-card">
-                <h3>Sede Caracolí</h3>
-                <p>Comprometidos con el desarrollo académico y comunitario en el sector Caracolí.</p>
-                <span>Niveles: Primaria y Bachillerato</span>
-            </div>
-            <div class="sede-card">
-                <h3>Sede Villa Arabia</h3>
-                <p>Instalaciones modernas para la formación de nuestros futuros bachilleres.</p>
-                <span>Niveles: Bachillerato Técnico</span>
+    <section id="inicio" class="hero-liceo">
+        <div class="hero-overlay">
+            <h2>FORMANDO EL FUTURO DE CAUCASIA</h2>
+            <p>Modalidad 100% Presencial | Preescolar - Primaria - Bachillerato</p>
+            <div class="hero-buttons">
+                <a href="#sedes" class="btn-yellow">Nuestras Sedes</a>
+                <a href="#oferta" class="btn-outline">Ver Oferta</a>
             </div>
         </div>
     </section>
 
-    <section id="oferta" class="oferta-academica">
-        <div class="container">
-            <h2 class="section-title">Oferta Académica Presencial</h2>
-            <div class="niveles">
-                <div class="nivel"><strong>PREESCOLAR:</strong> Grados Transición y Jardín.</div>
-                <div class="nivel"><strong>BÁSICA PRIMARIA:</strong> De 1° a 5° grado.</div>
-                <div class="nivel"><strong>BACHILLERATO:</strong> Educación media técnica completa.</div>
+    <main class="container">
+        <section id="sedes" class="section-padding">
+            <h2 class="main-title">Nuestras Sedes</h2>
+            <div class="underline"></div>
+            <div class="grid-sedes">
+                <div class="card">
+                    <div class="card-header">Sede San José</div>
+                    <div class="card-body">
+                        <p>Atención especializada para los grados iniciales en un ambiente seguro.</p>
+                        <ul class="badge-list">
+                            <li>Preescolar</li>
+                            <li>Primaria</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Sede Caracolí</div>
+                    <div class="card-body">
+                        <p>Formación integral con enfoque comunitario y académico sólido.</p>
+                        <ul class="badge-list">
+                            <li>Primaria</li>
+                            <li>Bachillerato</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Sede Villa Arabia</div>
+                    <div class="card-body">
+                        <p>Instalaciones modernas dedicadas a la formación técnica y académica.</p>
+                        <ul class="badge-list">
+                            <li>Bachillerato</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Colegio El Divino Niño - Caucasia, Antioquia.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Colegio El Divino Niño - Institución Educativa Presencial</p>
             <p class="credits">Desarrollado por: <strong>Vibras Positivas</strong></p>
         </div>
     </footer>
