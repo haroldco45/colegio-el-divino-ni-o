@@ -1,185 +1,215 @@
-/* Variables de color para fácil edición */
 :root {
-    --azul-oscuro: #003366;
-    --amarillo-linea: #ffcc00;
-    --gris-fondo: #f4f4f4;
+    --azul-liceo: #003366;
+    --azul-claro: #004a92;
+    --amarillo: #ffcc00;
+    --gris-oscuro: #333;
     --blanco: #ffffff;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: var(--gris-fondo);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    color: var(--gris-oscuro);
+    background-color: #f8f9fa;
 }
 
-/* Header */
-header {
-    background: var(--azul-oscuro);
-    color: var(--blanco);
-    padding: 1rem 5%;
+/* Barra Superior */
+.top-bar {
+    background: var(--azul-liceo);
+    color: white;
+    font-size: 13px;
+    padding: 8px 5%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.container-flex {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 5px solid var(--amarillo-linea);
+}
+
+/* Header Estilo Institucional */
+header {
+    background: white;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo-container {
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .logo-img {
-    height: 50px;
-    width: auto;
+    height: 70px;
+}
+
+.logo-text h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    color: var(--azul-liceo);
+}
+
+.logo-text span {
+    font-size: 0.8rem;
+    color: #777;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 20px;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: var(--azul-liceo);
+    font-weight: 700;
     font-size: 0.9rem;
 }
 
 /* Hero Section */
-.hero {
-    background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://via.placeholder.com/1200x400'); /* Aquí puedes poner una foto del colegio */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
+.hero-liceo {
+    height: 450px;
+    background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1350&q=80') center/cover;
+    position: relative;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.btn-principal {
-    display: inline-block;
-    margin-top: 20px;
-    background: var(--amarillo-linea);
-    color: var(--azul-oscuro);
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-/* Secciones generales */
-.container {
-    padding: 50px 5%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.section-title {
-    text-align: center;
-    color: var(--azul-oscuro);
-    margin-bottom: 40px;
-    font-size: 2rem;
-}
-
-/* Grid de Sedes */
-.grid-sedes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.sede-card {
-    background: var(--blanco);
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-top: 5px solid var(--azul-oscuro);
-    transition: transform 0.3s;
-}
-
-.sede-card:hover {
-    transform: translateY(-10px);
-}
-
-.sede-card h3 {
-    color: var(--azul-oscuro);
-    margin-bottom: 15px;
-}
-
-.sede-card span {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #666;
-}
-
-/* Oferta Académica */
-.oferta-academica {
-    background: var(--azul-oscuro);
-    color: white;
-    text-align: center;
-}
-
-.oferta-academica .section-title {
-    color: white;
-}
-
-.niveles {
+.hero-overlay {
+    background: rgba(0, 51, 102, 0.75);
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: center;
     align-items: center;
+    color: white;
+    text-align: center;
 }
 
-.nivel {
-    background: rgba(255,255,255,0.1);
-    padding: 15px;
-    width: 80%;
+.hero-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    border-bottom: 3px solid var(--amarillo);
+}
+
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-yellow {
+    background: var(--amarillo);
+    color: var(--azul-liceo);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* Contenido y Tarjetas */
+.section-padding {
+    padding: 60px 0;
+}
+
+.main-title {
+    text-align: center;
+    color: var(--azul-liceo);
+    text-transform: uppercase;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background: var(--amarillo);
+    margin: 10px auto 40px;
+}
+
+.grid-sedes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background: var(--azul-claro);
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.badge-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.badge-list li {
+    background: #e9ecef;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    color: var(--azul-liceo);
+    font-weight: bold;
 }
 
 /* Footer */
 footer {
-    background: #222;
-    color: #bbb;
-    padding: 30px 20px;
+    background: #1a1a1a;
+    color: white;
+    padding: 20px 0;
     text-align: center;
+}
+
+.footer-bottom {
+    font-size: 14px;
 }
 
 .credits {
     margin-top: 10px;
-    font-size: 0.8rem;
-    border-top: 1px solid #444;
-    padding-top: 10px;
+    color: #888;
 }
 
-/* Ajustes para Celular */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-    nav ul {
-        margin-top: 15px;
-    }
-    .hero h2 {
-        font-size: 1.8rem;
-    }
+/* Móvil */
+@media (max-width: 768px) {
+    .container-header { flex-direction: column; gap: 20px; }
+    .hero-overlay h2 { font-size: 1.8rem; }
+    .hero-buttons { flex-direction: column; }
 }
